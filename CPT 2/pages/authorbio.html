@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Dashner - Maze Runner Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+			background-image: url("../photos/mazerunner.jpg");
+			background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .bio-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .bio-image {
+            width: 250px;
+            height: 350px; /* Set a fixed height */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
+        }
+
+        .bio-content {
+            flex: 1;
+        }
+
+        h2 {
+            color: #555555;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .extra-info {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .extra-info h3 {
+            color: #444444;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+
+        .extra-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .extra-info li {
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>James Dashner</h1>
+        <div class="bio-card">
+            <img src="../photos/JamesDashner.jpeg" alt="James Dashner" class="bio-image">
+            <div class="bio-content">
+                <h2>About James Dashner</h2>
+                <p>James Dashner is an American writer known for his speculative fiction. He is the author of the Maze Runner series, which has been a major hit among young adult readers and has been adapted into a successful film series.</p>
+                <p>Born on November 26, 1972, in Austell, Georgia, Dashner developed a passion for writing early in life. He graduated from Brigham Young University with a degree in accounting but soon turned to writing full-time. His works often explore dystopian themes, blending action, mystery, and complex characters.</p>
+                <p>The Maze Runner series, his most notable work, includes titles like "The Maze Runner," "The Scorch Trials," and "The Death Cure." These books have captivated millions of readers around the world and continue to be a favorite among fans of the genre.</p>
+                <button id="more-info-btn">More Info</button>
+            </div>
+        </div>
+        <div id="extra-info" class="extra-info">
+            <h3>More Works by James Dashner</h3>
+            <ul>
+                <li>The Eye of Minds</li>
+                <li>The Rule of Thoughts</li>
+                <li>The Game of Lives</li>
+                <li>The Journal of Curious Letters</li>
+                <li>The Hunt for Dark Infinity</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('more-info-btn').addEventListener('click', function() {
+            var extraInfo = document.getElementById('extra-info');
+            if (extraInfo.style.display === 'none' || extraInfo.style.display === '') {
+                extraInfo.style.display = 'block';
+            } else {
+                extraInfo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            background-size: cover;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            animation: slideIn 1s ease-in-out;
+            margin-left: -955px;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ffeb3b;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #usernameDisplay {
+            font-weight: 600;
+            color: #ffeb3b;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e64a19;
+            transform: scale(1.1);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+            }
+            to {
+                text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b;
+            }
+        }
+
+        :root {
+            --white: #ffffff;
+            --light-grey: #edf0f1;
+            --violet: #655be1;
+            --dark-violet: #5146e1;
+            --black: #21232a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #ffeb3b;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <title>The Maze Runner Quiz Game</title>
+    <link rel="stylesheet" href="css/title-styles.css">
+    <script>
+        function getUsernameFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('username');
+        }
+
+        function displayUsername() {
+            const username = getUsernameFromUrl();
+            if (username) {
+                document.getElementById('usernameDisplay').textContent = username;
+            }
+        }
+
+        function startGame() {
+            // Add functionality to start the game here
+        }
+
+        window.onload = displayUsername;
+    </script>
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="../videos/titlegif.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="https://www.dcp.edu.gov.on.ca/en/curriculum/elementary-language">Ministry of Education</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="Contactpage.html">Contact</a></li>
+			<li><a href="authorbio.html">Author's Bio</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>The Maze Runner Quiz Game</h1>
+        <p>Welcome! Are you ready to test your knowledge?</p>
+        <a href="bookauthorbio.html"><button class="btn">Start Game</button></a>
+    </div>
+
+    <footer class="page-footer"></footer>
+</body>
+</html>

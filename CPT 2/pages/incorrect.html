@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrong Answer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-image: url("../photos/Thomasupset.jpeg");
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #ff4081, #81d4fa);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            height: 70%;
+            margin-left: 20px;
+        }
+
+        .text-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e91e63;
+        }
+
+        .image-section {
+            flex: 1;
+            text-align: right;
+            display: none; /* Hide the image section for now */
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                margin: 20px;
+            }
+
+            .text-section {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .image-section {
+                text-align: center;
+                display: none; /* Keep the image section hidden on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>Oops, Wrong Answer!</h1>
+            <p>It seems you got the answer wrong. Don't worry, you can try again. Remember, the first thing Thomas remembered about his life was his name.</p>
+            <a href="question1.html" class="btn">Try Again</a>
+        </div>
+        <div class="image-section">
+            <img src="../photos/thomas.png" alt="Thomas">
+        </div>
+    </div>
+</body>
+</html>
